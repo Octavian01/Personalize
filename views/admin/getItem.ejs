@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/aGetItem.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.13.0-web/css/all.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <form action="/admin/getItemPost" method="POST" class="general-container center add-item-form" enctype="multipart/form-data">
+        <div class="input-container">
+            <input class="add-item-input-classic" id="title" type="text" name="title">
+            <label for="title" class="label-for-classic-input">Title</label>
+        </div>
+        <div class="images-input">
+            <div class="input-container">
+                <input class="add-item-input-classic img-url" type="text" name="image">
+                <label for="image" class="label-for-classic-input">Image</label>
+            </div>
+        </div>
+        <div class="input-container">
+            <input class="add-item-input-classic" id="price" type="number" name="price" step="0.01">
+            <label for="price" class="label-for-classic-input">Price</label>
+        </div>
+        <div class="input-container">
+            <textarea name="description" rows="3" id="description" class="autoresizing" placeholder="Description" maxlength="900"></textarea>
+            <label for="description" class="label-for-description">900</label>
+        </div>
+        <div class="ul-selectors">
+            <ul class="select-ul category" id="categoryUl">
+                <div class="active">
+                    <li class="active-text active-text-category">--Category<span style="color: red;">*</span>--</li>
+                    <span class="arrow-down">&nbsp;</span><span class="arrow-up display-none">&nbsp;</span>
+                </div>
+                <div class="non-active-items display-none">
+                    <li rel="Jewellry&Accessories" class="non-active-item">Jewellry & Accessories</li>
+                    <li rel="Clothing&Shoes" class="non-active-item">Clothing & Shoes</li>
+                    <li rel="Home-Products" class="non-active-item">Home Products</li>
+                    <li rel="Wedding&Party" class="non-active-item">Wedding & Party</li>
+                    <li rel="Toys&Entertainment" class="non-active-item">Toys & Entertainment</li>
+                </div>
+            </ul>
+            <ul class="select-ul subcategory" id="subcategoryUl">
+                <div class="active cursor-not-allowed" id="active-subcategory">
+                    <li class="active-text active-text-subcategory">--Subcategory<span style="color: red;">*</span>--</li>
+                    <span class="arrow-down arrow-down-2">&nbsp;</span><span class="arrow-up arrow-up-2 display-none">&nbsp;</span>
+                </div>
+                <div class="non-active-items display-none">
+                    <!-- lis for subcategory -->
+                </div>
+            </ul>
+            <ul class="select-ul display-none" id="specificItemUl">
+                <div class="active" id="active-specific-item">
+                    <li class="active-text active-text-specific-item">--Specific Item<span style="color: red;">*</span>--</li>
+                    <span class="arrow-down arrow-down-3">&nbsp;</span><span class="arrow-up arrow-up-3 display-none">&nbsp;</span>
+                </div>
+                <div class="non-active-items display-none">
+                    <!-- lis for specific item -->
+                </div>
+            </ul>
+        </div>
+        <input type="hidden" name="category" id="category">
+        <input type="hidden" name="subcategory" id="subcategory">
+        <input type="hidden" name="specificItem" id="specificItem">
+        <input type="hidden" value="<%= csrfToken %>" name="_csrf" class="token">
+        <label class="label-for-file" for="file">
+            <svg class="download-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path class="download-svg" d="m12 23c-.128 0-.256-.049-.354-.146l-5-5c-.143-.143-.186-.358-.108-.545s.26-.309.462-.309h2.5v-5c0-.551.448-1 1-1h3c.552 0 1 .449 1 1v5h2.5c.202 0 .385.122.462.309s.034.402-.108.545l-5 5c-.098.097-.226.146-.354.146zm-3.793-5 3.793 3.793 3.793-3.793h-1.793c-.276 0-.5-.224-.5-.5v-5.5h-3v5.5c0 .276-.224.5-.5.5z"></path>
+                <path class="download-svg" d="m4.501 16.97c-.019 0-.037-.001-.057-.003-2.533-.281-4.444-2.417-4.444-4.967 0-2.642 2.059-4.811 4.656-4.988.692-3.456 3.777-6.012 7.344-6.012 2.801 0 5.381 1.578 6.653 4.044 3.022.317 5.347 2.878 5.347 5.956 0 2.68-1.796 5.05-4.366 5.762-.27.073-.542-.083-.615-.349-.074-.266.082-.542.348-.615 2.139-.592 3.633-2.566 3.633-4.798 0-2.647-2.063-4.835-4.697-4.981-.185-.01-.348-.121-.426-.288-1.058-2.266-3.364-3.731-5.877-3.731-3.215 0-5.977 2.395-6.425 5.57-.035.246-.246.43-.495.43-2.286 0-4.08 1.794-4.08 4 0 2.04 1.528 3.748 3.556 3.973.274.031.472.278.441.552-.028.256-.245.445-.496.445z"></path>
+            </svg>
+            <div class="label-for-file-text">
+                Choose some photos...
+            </div>
+        </label>
+        <input class="add-item-input-file" id="file" type="file" name="imgs" multiple>
+        
+        <button class="add-item-button btn" type="submit">Submit</button>
+    </form>
+    <%- include('../includes/footer.ejs') %>
+
+    <script type="module" src="../js/getItem.js"></script>
+</body>
+</html>

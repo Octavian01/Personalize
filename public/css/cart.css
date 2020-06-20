@@ -1,0 +1,156 @@
+.cart {
+    background-color: rgba(245, 222, 179, 0.4);
+    padding-bottom: 3rem;
+}
+
+.cart-title h2 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.cart-data {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(212, 208, 186);
+    border-radius: 5px;
+    padding: 2.5rem;
+}
+
+.cart-data-items {
+    width: 66%;
+}
+
+.cart-data-item {
+    display: flex;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.cart-data-item:last-child {
+    border: none;
+}
+
+.cart-data-items img {
+    width: 17rem;
+    height: 17rem;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.cart-data-item-title {
+    width: 25rem;
+    padding-left: 1rem;
+    text-decoration: underline;
+    color: rgb(48, 48, 48);
+    font-size: 300;
+}
+
+.cart-data-item-div-child {
+    display: block;
+    margin-top: 2.5rem;
+}
+
+.cart-data-item-div {
+    padding: 0 1rem;
+    width: 33rem;
+}
+
+.cart-data-item-title:hover {
+    color: rgb(110, 110, 110);
+}
+
+.cart-data-item-remove {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: rgb(40, 40, 40);
+}
+
+.cart-data-item-remove:hover {
+    text-decoration: underline;
+    color: rgb(100, 100, 100);
+}
+
+
+.cart-data-item-quantity {
+    margin-left: auto;
+    margin-top: 1.4rem;
+}
+
+.cart-data-item-select-quantity {
+    padding: 4px 5px;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cart-data-item-price-and-q {
+    margin-left: auto;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.cart-data-pay {
+    width: 29rem;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.26);
+    height: 43rem;
+}
+ 
+.cart-data-pay-form input {
+    display: inline-block;
+}
+
+.cart-data-pay-form div {
+    margin: 1rem 0;
+}
+
+.cart-data-pay-division {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.cart-data-pay-form p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.cart-data-pay-form-btn {
+    margin: 1rem auto;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.cart-data-pay-form img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.card-data-pay-form-i {
+    display: flex;
+    align-items: center;
+}
+
+.card-data-pay-form-i input {
+    margin-top: -2px;
+    margin-right: 2rem;
+}
+
+.cart-data-pay-total {
+    font-weight: bold;
+}

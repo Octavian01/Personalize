@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.13.0-web/css/all.css">
+</head>
+<body>
+    <input type="hidden" value="<%=product%>" name="productData" id="productData">
+    
+    <%- include('../includes/nav.ejs') %>
+    
+    <main class="general-container grid-2-column">
+        <div class="pop-up-image-display display-none">
+            <div class="pop-up-big-image">
+                <div class="pop-up-big-image-loc">
+                    <div class="img">
+                        <!-- big image -->
+                    </div>
+
+                </div>
+                <span class="pop-up-big-image-previous product-arrow-image-display" id="pop-up-previous">
+                    <div class="pop-up-span-element">
+                        <svg class="product-image-svg-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823" style="enable-background:new 0 0 240.823 240.823;"><path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z"></path></svg>
+                    </div>
+                </span>
+                <span class="pop-up-big-image-next product-arrow-image-display" id="pop-up-next">
+                    <div class="pop-up-span-element">
+                        <svg class="product-image-svg-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823" style="enable-background:new 0 0 240.823 240.823;"><path d="M183.189,111.816L74.892,3.555c-4.752-4.74-12.451-4.74-17.215,0c-4.752,4.74-4.752,12.439,0,17.179 l99.707,99.671l-99.695,99.671c-4.752,4.74-4.752,12.439,0,17.191c4.752,4.74,12.463,4.74,17.215,0l108.297-108.261 C187.881,124.315,187.881,116.495,183.189,111.816z"></path></svg>
+                    </div>
+                </span>
+            </div>
+            <div class="display-block-margin-auto">
+                <div class="product-arrow-image-display close-pop-up">
+                    <svg height="17" viewBox="0 0 329.26933 329" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path></svg>
+                </div>
+                <ul class="pop-up-list">
+                    <!-- li items -->
+                </ul>
+            </div>
+
+        </div>
+        <div class="product-part-images">
+            
+            <div class="product-image-display">
+                <ul class="product-images-list">
+                    <!-- li items -->
+                </ul>
+                <div class="product-image-display-image">
+                    <!-- big image -->
+                </div>
+                <span class="product-image-display-previous product-arrow-image-display" id="previous">
+                    <div class="product-image-span-element">
+                        <svg class="product-image-svg-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823" style="enable-background:new 0 0 240.823 240.823;"><path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z"></path></svg>
+                    </div>
+                </span>
+                <span class="product-image-display-next product-arrow-image-display" id="next">
+                    <div class="product-image-span-element">
+                        <svg class="product-image-svg-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.823 240.823" style="enable-background:new 0 0 240.823 240.823;"><path d="M183.189,111.816L74.892,3.555c-4.752-4.74-12.451-4.74-17.215,0c-4.752,4.74-4.752,12.439,0,17.179 l99.707,99.671l-99.695,99.671c-4.752,4.74-4.752,12.439,0,17.191c4.752,4.74,12.463,4.74,17.215,0l108.297-108.261 C187.881,124.315,187.881,116.495,183.189,111.816z"></path></svg>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="product-part-data">
+            <div class="product-part-data__raiting">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span id="product-raiting">
+                    <!-- product raiting -->
+                </span>
+            </div>
+            <div class="product-part-data__title">
+                <!-- Title -->
+            </div>
+            <div class="product-part-data__price">
+                <!-- product price --> 
+            </div>
+            <div class="product-part-data__add-to-basket margin-top-3rem">
+                <form action="/addToCart/<%= productId %>">
+                    <button type="submit" class="btn product-part-data__btn">Add to basket</button>
+                </form>
+            </div>
+            <div class="product-part-data__description margin-top-3rem">
+                <div class="product-part-data__description-title">Description</div>
+                <div class="product-part-data__description-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ipsam excepturi voluptates illo mollitia natus tempore repudiandae assumenda quaerat, earum, voluptate ducimus, dicta molestiae nihil quibusdam facere laboriosam vel eveniet.
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui maiores recusandae! Delectus nemo dicta nam vero praesentium unde debitis similique? Sunt repudiandae dolorem sint suscipit velit facere dolore pariatur.
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui maiores recusandae! Delectus nemo dicta nam vero praesentium unde debitis similique? Sunt repudiandae dolorem sint suscipit velit facere dolore pariatur.
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui maiores recusandae! Delectus nemo dicta nam vero praesentium unde debitis similique? Sunt repudiandae dolorem sint suscipit velit facere dolore pariatur.
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui maiores recusandae! Delectus nemo dicta nam vero praesentium unde debitis similique? Sunt repudiandae dolorem sint suscipit velit facere dolore pariatur.
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui maiores recusandae! Delectus nemo dicta nam vero praesentium unde debitis similique? Sunt repudiandae dolorem sint suscipit velit facere dolore pariatur.
+                </div>
+                <div class="product-part-data__description-button">
+                    <button class="product-part-data__description-btn">
+                        <div class="product-part-data__description-btn-text">
+                            Learn more about this item
+                        </div>
+                        <span>&nbsp;</span>
+                    </button>
+                </div>
+                <div class="product-part-data__delivery">
+                    <div class="product-part-data__delivery-text">
+                        <div class="product-part-data__delivery-estimated-text" id="estimated">Estimated delivery</div>
+                        <span class="product-part-data__delivery-helper-arrow">&nbsp;</span>
+                        <div class="product-part-data__delivery-helper-text">
+                            <!-- some text -->
+                        </div>
+                    </div>
+                    
+                    <div class="product-part-data__delivery-date">
+                        <!-- delivery date -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <%- include('../includes/footer.ejs') %>
+</div>
+    <script type="module" src="../js/product.js"></script>
+</body>
+</html>

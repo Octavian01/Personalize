@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.13.0-web/css/all.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <input type="hidden" value="<%= csrfToken %>" name="_csrf" class="token">
+    <input type="hidden" name="items" id="items" value="<%= items %>">
+    <main class="cart">
+        <div class="general-container">
+            <div class="cart-title">
+                <!-- number of items in basket -->
+            </div>
+            <div class="cart-data">
+                <ul class="cart-data-items">
+                    
+                    <!-- img -->
+                    <!-- title -->
+                    <!-- price -->
+                    <!-- quantity -->
+                </ul>
+                <div class="cart-data-pay">
+                    <form class="cart-data-pay-form">
+                        <h3>How you'll pay</h3>
+                        <div class="card-data-pay-form-i">
+                            <input type="radio" checked name="pay" id="bank-cart" value="bank-cart">
+                            <label for="bank-cart">
+                                <img src="/images/logos/mastercard.png" alt="MasterCard">
+                                <img src="/images/logos/visa.png" alt="VisaCard">
+                            </label>
+                        </div>
+                        <div class="card-data-pay-form-i">
+                            <input type="radio" name="pay" id="paypal" value="paypal">
+                            <label for="paypal">
+                                <img src="/images/logos/paypal.png" alt="PayPal">
+                            </label>
+                        </div>
+                        <div>
+                            <div class="cart-data-pay-division">
+                                <div>Item(s) total</div>
+                                <div class="cart-data-pay-sum">USD 91.30</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="cart-data-pay-division">
+                                <div class="cart-data-pay-total">Total <span class="cart-data-pay-total-items"></span> </div>
+                                <div class="cart-data-pay-total"><span class="cart-data-pay-total-totalMoney"></span></div>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn cart-data-pay-form-btn" type="button">Proceed to checkout</button>
+                        </div>
+                        <p>
+                            Local taxes included (where applicable)
+                            Additional duties and taxes may apply
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../includes/footer.ejs') %>
+    <script type="module" src="js/cart.js"></script>
+</body>
+</html>

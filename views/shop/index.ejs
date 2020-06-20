@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.13.0-web/css/all.css">
+</head>
+<body style="position: relative;">
+    <%- include('../includes/nav.ejs') %>
+
+    <div class="general-message">Find things you'll love. Support independent sellers. Only on Personalize.</div>
+    <input type="hidden" id="data" name="data" value="<%= data %>">
+    <main class="general-container">
+        <div class="container-index">
+            <a href="/" class="item-a">
+                <div href="/" class="item-a-1">
+                    <div>All sorts of stuff for staying in.</div>
+                    <br>
+                    <span class="index-item-a-1">Shop now</span>
+                    <span class="index-item-arr-a">&#8250;</span>
+                </div>
+                <div class="item-a-2">
+                    <img src="images/index/img-left.jpg" alt="Confort">
+                </div>
+            </a>
+            <a href="/" class="item-b margin-left-2rem">
+                <img src="images/index/img-right.jpg" alt="Image-2">
+                <div class="item-b-text">
+                    <div class="d">Everyday supplies. Made by small bisinesses.</div>
+                    <div class="index-item-align">
+                        <span class="index-item-a-1">Shop now</span>
+                        <span class="index-item-arr-b">&#8250;</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/" class="item-c margin-left-2rem">
+                <div class="index-item-box padding-1rem">
+                    <div>Ready-to-dispatch masks and more<span>&#8250;</span></div>
+                </div>
+            </a>
+        </div>
+        <div class="container-index-2 margin-top-2rem">
+            <div class="index-2__item">
+                <div class="index-2__item-title"><i class="fas fa-check"></i><div>Uniquie everything</div></div>
+                <p class="index-2__item-text">
+                    We have millions of one-of-a-kind items, so you can find whatever you need (or really, really want).
+                </p>
+            </div>
+            <div class="index-2__item">
+                <div class="index-2__item-title"><i class="fas fa-check"></i><div>Independent sellers</div></div>
+                <p class="index-2__item-text">
+                    Buy directly from someone who put their heart and soul into making something special.
+                </p>
+            </div>
+            <div class="index-2__item">
+                
+                <div class="index-2__item-title"><i class="fas fa-check"></i><div>Secure shopping</div></div>
+                <p class="index-2__item-text">
+                    We use best-in-class technology to protect your transactions.
+                </p>
+            </div>
+        </div>
+        <div class="container-index-3 margin-top-2rem">
+            <div class="index-3__title">Popular right now</div>
+            <div class="index-3__items"></div>
+        </div>
+    </main>
+
+
+
+    <div class="bottom">
+        <div class="general-container center bottom-container">
+            <div class="bottom-title">
+                <h1>What is Personalize?</h1>
+                <a href="/">Read our wonderfully weird story.</a>
+            </div>
+            <div class="index-4-row">
+                <div class="index-4-item-1 index-4-item">
+                    <h2>A one-of-a-kind community</h2>
+                    <p>Personalize is a global online marketplace, where people come together to make, sell, buy and collect unique items.</p>
+                </div>
+                <div class="index-4-item-2 index-4-item">
+                    <h2>Support independent creators</h2>
+                    <p>There’s no Personalize warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
+                </div>
+                <div class="index-4-item-3 index-4-item">
+                    <h2>Peace of mind</h2>
+                    <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
+                </div>
+            </div>
+            <div class="bottom-last">
+                <p class="bottom-last-p">Have a question? Well, we’ve got some answers.</p>
+                <div class="margin-top-2rem">
+                    <a href="/" class="btn index-4-btn scale-btn">Go to Help Center</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('../includes/footer.ejs') %>
+
+
+    
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

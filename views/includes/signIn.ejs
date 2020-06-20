@@ -1,0 +1,78 @@
+<div class="pop-up-sign-in display-none" id="signIn">
+    <div class="pop-up-sign-in__container">
+        <div class="pop-up-sign-in__container-head">
+            <div>Sign In</div>
+            <button class="btn" id="registerBtn"><span>Register</span></button>
+        </div>
+        <form action="/auth/signin" method="POST" class="pop-up-sign-in__container-form" id="login-form">
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <div class="check-and-forgot-password">
+                <div class="check">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox" style="font-size: 1.7rem;">Stay signed in</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="/">Forgot your password?</a>
+                </div>
+            </div>
+            <button type="button" class="submit-sign-in" id="login-submit"><span>Sign in</span></button>
+            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+        </form>
+        <div class="or">
+            <div class="line"></div>
+            <span>OR</span>
+        </div>
+        <div class="sign-in-with-logo">
+            <img src="/images/logos/google.png" alt="Google Photo">
+            <div>Continue with Google</div>
+        </div>
+        <div class="sign-in-with-logo">
+            <img src="/images/logos/facebook.png" alt="Facebook Photo">
+            <div>Continue with Facebook</div>
+        </div>
+        <p class="sign-in-paragraph">
+            By clicking Sign in or Continue with Google, or Facebook you agree to Etsy's Terms of Use and Privacy Policy. Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
+        </p>
+    </div>
+</div>
+
+<div class="pop-up-sign-in display-none" id="register">
+    <div class="pop-up-sign-in__container">
+        <div class="pop-up-sign-in__container-head">
+            <div>Create your accoung</div>
+        </div>
+        <p style="text-align: left;">Registration is easy.</p>
+        
+        <form action="/auth/register" method="POST" class="pop-up-sign-in__container-form" id="register-form">
+            <label for="remail">Email address<span style="color: red;">*</span></label>
+            <input type="email" name="remail" id="remail">
+            <!-- Some span error -->
+            <label for="rfirstName">First name<span style="color: red;">*</span></label>
+            <input type="text" name="rfirstName" id="rfirstName">
+            <!-- Some span error -->
+            <label for="rpassword">Password<span style="color: red;">*</span></label>
+            <input type="password" name="rpassword" id="rpassword">
+            <!-- Some span error -->
+            <button type="button" id="register-submit" class="submit-sign-in"><span>Register</span></button>
+            <input type="hidden" value="<%= csrfToken %>" name="_csrf" id="token">
+        </form>
+        <div class="or">
+            <div class="line"></div>
+            <span>OR</span>
+        </div>
+        <div class="sign-in-with-logo">
+            <img src="/images/logos/google.png" alt="Google Photo">
+            <div>Continue with Google</div>
+        </div>
+        <div class="sign-in-with-logo">
+            <img src="/images/logos/facebook.png" alt="Facebook Photo">
+            <div>Continue with Facebook</div>
+        </div>
+        <p class="sign-in-paragraph">
+            By clicking Sign in or Continue with Google, or Facebook you agree to Etsy's Terms of Use and Privacy Policy. Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
+        </p>
+    </div>
+</div>
