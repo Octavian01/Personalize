@@ -65,7 +65,6 @@ app.use((req, res, next) => {
             basket: { items: [] },
             likesItems: []
         }
-        console.log(req.session);
         return next();
     } else return next();
 
