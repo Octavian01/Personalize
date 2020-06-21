@@ -34,7 +34,7 @@ const descriptionButton = document.querySelector('.product-part-data__descriptio
 
 const descriptionTitleButton = document.querySelector('.product-part-data__description-btn-text');
 
-const descriptionTextButton = document.querySelector('.product-part-data__description-text');
+const descptionText = document.querySelector('.product-part-data__description-text');
 
 const deliverData = document.querySelector('.product-part-data__delivery-date');
 
@@ -53,6 +53,8 @@ bigImage.innerHTML = getImageAndHeart();
 
 const bigImageContainer = document.querySelector('.product-big-image-container');
 const bigImageHeart = document.querySelector('.product-heart-container');
+
+descptionText.innerHTML = data.description;
 
 bigImageHeart.addEventListener('click', e => {
     const updateHeart = async (path, id, token) => {
@@ -232,10 +234,10 @@ previousArrowPopUp.addEventListener('click', e => {
 descriptionButton.addEventListener('click', e => {
     if (descriptionTitleButton.innerHTML === 'Less') {
         descriptionTitleButton.innerHTML = 'Learn more about this item';
-        descriptionTextButton.classList.remove('product-part-data__description-text-active');
+        descptionText.classList.remove('product-part-data__description-text-active');
     } else {
         descriptionTitleButton.innerHTML = 'Less';
-        descriptionTextButton.classList.add('product-part-data__description-text-active');
+        descptionText.classList.add('product-part-data__description-text-active');
         
     }
 })
