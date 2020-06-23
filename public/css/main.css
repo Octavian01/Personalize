@@ -85,6 +85,14 @@ button {
     padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
+@media only screen and (max-width: 450px) {
+    .general-container {
+        max-width: 100%;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        overflow: hidden;
+    }
+}
+
 .general-header {
     margin-bottom: 2rem;
 }

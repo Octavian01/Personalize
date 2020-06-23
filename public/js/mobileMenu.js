@@ -44,9 +44,10 @@ function mobileMenu() {
          return false;
       }
    })
-   
+    
    window.addEventListener('resize', () => {
       windowWidth = window.innerWidth;
+      initialMobileMenu();
       insertNav(windowWidth, dropDown, browsedAlready, []);
    })
 
