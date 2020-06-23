@@ -434,7 +434,7 @@
     .nav__list {
         text-align: center;
         display: block;
-        padding-bottom: 1.5rem;
+        padding-bottom: 4rem;
     }
 
     .nav__item:first-child {
@@ -456,7 +456,7 @@
     }
 
     .nav__item span {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Quicksand', sans-serif;
         font-weight: 500;
     }
 
