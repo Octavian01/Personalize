@@ -1,7 +1,7 @@
 const data = JSON.parse(document.getElementById('data').value);
 const userData = JSON.parse(document.getElementById('userData').value);    
 const itemsDiv = document.querySelector('.index-3__items');
-console.log(data);    
+
 const getPopularData = () => {
     let output = '';
     for (let i = 0; i < 6; i++) {

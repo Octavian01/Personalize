@@ -11,6 +11,9 @@
             <div class="nav__search">
                 <div class="personalize-text"><a href="/">Personalize</a></div>
                 <div class="nav__search-i">
+                    <div class="nav__mobile-menu">
+                        <div class="middle">&nbsp;</div>
+                    </div>
                     <form action="/" class="nav__search-submit" id="nav-form">
                         <input class="nav__search-input backgroundcolor-gray" type="text" placeholder="Search for items">
                         <button type="submit" class="nav__submit-icon nav__search__input__toggle nav__submit-icon-w backgroundcolor-gray"><div class="wait-for-h nav__search__input__toggle">&nbsp;</div><i class="fas fa-search"></i></button>  
@@ -25,15 +28,9 @@
                     </div>
                 </div>
             </div>
-            <div class="nav__drop-down">
-                <ul class="nav__list" id="nav__ul">
-                    <li class="nav__item"><a class="nav__item-jewelry" href="/jewellery&accessories">Jewellry & Accessories<div class="nav__item-border"></div></a></li>
-                    <li class="nav__item"><a class="nav__item-clothing"href="/">Clothing & Shoes</a></li>
-                    <li class="nav__item"><a class="nav__item-home-products"href="/">Home Products</a></li>
-                    <li class="nav__item"><a class="nav__item-wedding"href="/">Wedding & Party</a></li>
-                    <li class="nav__item"><a class="nav__item-toys"href="/">Toys & Entertainment</a></li>
-                </ul>
-                <div class="nav__drop-down-content"></div>
+            
+            <div class="nav__drop-down" data-down-drop-element="true">
+                <!-- Drop Down mobile || dektop -->
             </div>
         </nav>
     </header>

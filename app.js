@@ -84,7 +84,7 @@ app.use('/jewellry&accessories', jewelleryAccessoriesRouter);
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(user => {
-        app.listen(process.env.PORT || 3045);
+        app.listen(process.env.PORT || 3046);
     })
     .catch(err => {
         throw err; 

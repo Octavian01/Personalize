@@ -1,6 +1,8 @@
+import mobileMenu from './mobileMenu.js';
+
 import {input as inp} from './search-bar.js'; // Toggle search bar icon
 
-import {ul as u} from './products-search.js'; // Products search animation
+mobileMenu();
 
 const isLoggedIn = document.getElementById('isLoggedIn').value;
 
