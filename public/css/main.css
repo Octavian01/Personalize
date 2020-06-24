@@ -88,8 +88,7 @@ button {
 @media only screen and (max-width: 450px) {
     .general-container {
         max-width: 100%;
-        padding: 1.5rem 1.5rem 0 1.5rem;
-        overflow: hidden;
+        padding: 1rem 1rem 0 1rem;
     }
 }
 
